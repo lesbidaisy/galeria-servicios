@@ -1,0 +1,260 @@
+*,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-areas:
+        'aside'
+        'menu'
+        'main'
+        'footer';
+    grid-template-columns: auto;
+    grid-template-rows: auto 56px auto 100px;
+}
+
+
+.barra_de_orden {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f8afdc;
+    position: sticky;
+    z-index: 1000; 
+    top: 0;
+}
+
+.titulo_ordenar {
+    margin: 0;
+    color: #860755;
+}
+
+.barra_de_filtro {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+}
+
+
+section{
+    grid-area: aside;
+    display: flex;
+    padding: 30px;
+    border-bottom: #f8afdc;
+    flex-direction: column;
+    gap: 20px;
+    
+    
+}
+
+.aside-bar{
+    background-color: #f3c8b2;
+
+}
+
+.titulo_logo {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 80px;
+    padding: 10px 5px;
+    gap: 10px
+}
+
+.titulo_logo h2 {
+    font-size: 40px;
+
+}
+
+.titulo_logo img {
+    width: 100px;
+    border-radius: 50%;
+    border: 1px #f94144 solid;
+
+}
+
+
+.titulo_principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f9844a;
+    font-size: x-large;
+    font-weight: bolder;
+    padding: 0 30px;
+}
+
+.links_a_secciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    margin: 0 20px;
+
+}
+
+.links_a_secciones a{
+    text-decoration: none;
+    color: #860755;
+}
+main {
+    grid-area: main;
+    background-color: #f5e1ee;
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    justify-content: center;
+    gap: 10%;
+}
+
+.title-container{
+    color: #860755;
+    padding: 0 30px;
+}
+
+.card{
+    width:18rem;
+    margin-bottom: 20px;
+}
+
+.servicios{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 8px;
+    justify-content:center;
+    gap: 5%; 
+}
+
+.servicios .card{
+    width: 16rem;
+}
+
+.custom-card {
+    width: 18px*0.5vw;
+    margin: 10px auto;
+    transition: transform 0.3s ease;
+}
+.custom-card:hover{
+    transition: transform 0.3s ease;
+}
+.custom-card:hover:hover{
+ transform:scale(1.2);
+}
+
+
+.custom-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+ul {
+    font-size: 12px;
+}
+.profile{
+    min-height: 300px;
+}
+
+.card-button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.custom-btn {
+    border: #da2d97 2px solid;
+    background-color: #fa935f;
+    padding: 3px 80px;
+    border-radius: 15px;
+    width: 90%;
+
+}
+
+.custom-btn:hover {
+    background-color: #da2d97;
+    color: #ccc;
+}
+
+.descripcion_seccion p{
+    color: #860755;
+    font-style: italic;
+    background-color: rgba(248, 180, 222, 0.5);
+
+    margin: 0 30px;
+    padding: 10px;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    gap: 8px;
+    padding: 16px;
+    background-color: #fce2a1;
+    border-top: #f8afdc;
+}
+
+footer img {
+    width: 24px;
+    border-radius: 50px;
+
+}
+footer h4{
+    color: #860755;
+}
+
+.rrss_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: small;
+    gap: 8px;
+    padding: 0 30px;
+}
+
+@media (max-width: 575px) {
+    body {
+        display: grid;
+        grid-template-areas:
+            'menu'
+            'aside'
+            'main'
+            'footer';
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .links_a_secciones a {
+        text-decoration: none;
+        color: #ee5c12;
+    }
+
+    .links_a_secciones a:hover {
+        color: #e71316;
+    }
+
+
+    .titulo_logo .icono_hamburguesa {
+        display: none;
+    }
+}
