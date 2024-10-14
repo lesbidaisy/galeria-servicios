@@ -26,7 +26,7 @@ body {
     padding: 20px;
     background-color: #f8afdc;
     position: sticky;
-    z-index: 1000; 
+    z-index: 1000;
     top: 0;
 }
 
@@ -48,18 +48,18 @@ body {
 }
 
 
-section{
+section {
     grid-area: aside;
     display: flex;
     padding: 30px;
     border-bottom: #f8afdc;
     flex-direction: column;
     gap: 20px;
-    
-    
+
+
 }
 
-.aside-bar{
+.aside-bar {
     background-color: #f3c8b2;
 
 }
@@ -106,16 +106,17 @@ section{
 
 }
 
-.links_a_secciones a{
+.links_a_secciones a {
     text-decoration: none;
     color: #860755;
 }
+
 main {
     grid-area: main;
     background-color: #f5e1ee;
 }
 
-.cards-container{
+.cards-container {
     display: flex;
     flex-wrap: wrap;
     padding: 0 20px;
@@ -123,25 +124,25 @@ main {
     gap: 10%;
 }
 
-.title-container{
+.title-container {
     color: #860755;
     padding: 0 30px;
 }
 
-.card{
-    width:18rem;
+.card {
+    width: 18rem;
     margin-bottom: 20px;
 }
 
-.servicios{
+.servicios {
     display: flex;
     flex-wrap: wrap;
     padding: 0 8px;
-    justify-content:center;
-    gap: 5%; 
+    justify-content: center;
+    gap: 5%;
 }
 
-.servicios .card{
+.servicios .card {
     width: 16rem;
 }
 
@@ -150,11 +151,13 @@ main {
     margin: 10px auto;
     transition: transform 0.3s ease;
 }
-.custom-card:hover{
+
+.custom-card:hover {
     transition: transform 0.3s ease;
 }
-.custom-card:hover:hover{
- transform:scale(1.2);
+
+.custom-card:hover:hover {
+    transform: scale(1.2);
 }
 
 
@@ -166,7 +169,8 @@ main {
 ul {
     font-size: 12px;
 }
-.profile{
+
+.profile {
     min-height: 300px;
 }
 
@@ -190,7 +194,7 @@ ul {
     color: #ccc;
 }
 
-.descripcion_seccion p{
+.descripcion_seccion p {
     color: #860755;
     font-style: italic;
     background-color: rgba(248, 180, 222, 0.5);
@@ -213,7 +217,8 @@ footer img {
     border-radius: 50px;
 
 }
-footer h4{
+
+footer h4 {
     color: #860755;
 }
 
@@ -226,35 +231,17 @@ footer h4{
     padding: 0 30px;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     body {
-        display: grid;
         grid-template-areas:
-            'menu'
             'aside'
+            'menu'
             'main'
             'footer';
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    section {
-        display: flex;
-        flex-direction: column;
+        grid-template-rows: auto auto auto auto;
+        max-width: 100%;
     }
 
 
-    .links_a_secciones a {
-        text-decoration: none;
-        color: #ee5c12;
-    }
-
-    .links_a_secciones a:hover {
-        color: #e71316;
-    }
-
-
-    .titulo_logo .icono_hamburguesa {
-        display: none;
-    }
 }
